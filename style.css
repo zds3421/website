@@ -4,6 +4,7 @@ html {
 	background-attachment: fixed;
 	top: 0;
 	right: 0;
+	scroll-behavior: smooth;
 }
 
 html,
@@ -25,9 +26,12 @@ span {
 	transition: margin-left 0.5s;
 }
 #page2,
-#page3,
+#page3 h2 {
+	padding-top: 49.5px;
+}
+
 #page4 h2 {
-	padding-top: 3.1%;
+	padding-top: 50px;
 }
 #content {
 	height: 100%;
@@ -46,6 +50,10 @@ span {
 #page3 {
 	width: 100%;
 	height: auto;
+}
+#page4 {
+	width: 100%;
+	height: 100%;
 }
 
 .sidebar {
@@ -129,7 +137,7 @@ span {
 	margin-top: 2%;
 	padding: 1% 1%;
 	display: flex;
-	width: 69%;
+	width: fit-content;
 	overflow-x: hidden;
 	/* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)); */
 	background-color: rgba(0, 0, 0, 0.5);
@@ -142,7 +150,8 @@ span {
 .section p {
 	font-size: 20px;
 	color: white;
-	width: 300px;
+	width: 20%;
+	height: auto;
 	padding-left: 1%;
 	padding-right: 1%;
 	margin: 2% 1% 2% 1%;
@@ -158,13 +167,13 @@ span {
 	width: 300px;
 	height: 300px;
 	margin-left: 1%;
-	margin-top: 5%;
+	margin-top: 2%;
 }
 
 #about {
 	/* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)); */
 	background-color: rgba(0, 0, 0, 0.5);
-	padding: 2% 50% 2% 3%;
+	padding: 2% 3% 2% 3%;
 	margin-left: 0;
 }
 
