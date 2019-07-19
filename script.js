@@ -3,10 +3,10 @@
 // 	document.getElementById('content').style.marginLeft = '160px';
 // }
 
-// function closeNav() {
-// 	document.getElementById('sidenav').style.width = '0';
-// 	document.getElementById('content').style.marginLeft = '0';
-// }
+function closeNav() {
+	document.getElementById('sidenav').style.width = '0';
+	document.getElementById('content').style.marginLeft = '0';
+}
 var isOut = false;
 function myFunction() {
 	var x = document.getElementById('sidenav');

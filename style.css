@@ -4,7 +4,6 @@ html {
 	background-attachment: fixed;
 	top: 0;
 	right: 0;
-	scroll-behavior: smooth;
 }
 
 html,
@@ -14,6 +13,7 @@ body {
 	font-family: calibri;
 	margin: 0 0;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 span {
