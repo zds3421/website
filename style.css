@@ -36,8 +36,12 @@ body {
 #page4 {
 	width: 100%;
 	height: 100%;
-	padding-top: 50px;
+}
+#page1 {
 	padding-bottom: 10%;
+}
+#page4 {
+	padding-top: 50px;
 }
 #page2,
 #page3 {
@@ -134,7 +138,7 @@ body {
 }
 
 .container i {
-	font-size: 700%;
+	font-size: 300%;
 }
 
 .section p {
