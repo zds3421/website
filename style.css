@@ -16,7 +16,7 @@ body {
 	scroll-behavior: smooth;
 }
 
-span {
+#hamburger {
 	position: fixed;
 	color: black;
 	background-color: red;
@@ -24,14 +24,7 @@ span {
 	display: grid;
 	place-items: center;
 	transition: margin-left 0.5s;
-}
-#page2,
-#page3 h2 {
-	padding-top: 49.5px;
-}
-
-#page4 h2 {
-	padding-top: 50px;
+	max-height: 50px;
 }
 #content {
 	height: 100%;
@@ -39,21 +32,18 @@ span {
 	transition: margin-left .5s;
 	background-color: transparent;
 }
-#page1 {
-	width: 100%;
-	height: 100%;
-}
-#page2 {
-	width: 100%;
-	height: auto;
-}
-#page3 {
-	width: 100%;
-	height: auto;
-}
+#page1,
 #page4 {
 	width: 100%;
 	height: 100%;
+	padding-top: 50px;
+	padding-bottom: 10%;
+}
+#page2,
+#page3 {
+	width: 100%;
+	height: auto;
+	padding-top: 50px;
 }
 
 .sidebar {
@@ -213,7 +203,6 @@ button {
 	#page1 img {
 		width: 200px;
 		height: 200px;
-		margin-top: 35%;
 	}
 	.section h1 {
 		font-size: 4rem;
@@ -233,14 +222,19 @@ button {
 
 	.section .container {
 		flex-wrap: wrap;
-		width: 100%;
+		width: fit-content;
 	}
-	.section .container i {
+	/* .section .container i {
 		flex: 0 50%;
+	} */
+	.section p {
+		width: 80%;
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 	#page2,
 	#page3,
-	#page4 h2 {
+	#page4 {
 		padding-top: 50px;
 	}
 }
