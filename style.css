@@ -42,6 +42,7 @@ body {
 }
 #page4 {
 	padding-top: 50px;
+	max-height: 100%;
 }
 #page2,
 #page3 {
@@ -204,6 +205,10 @@ button {
 }
 
 @media (max-width: 1023px) {
+	body,
+	html {
+		font-family: calibri;
+	}
 	#page1 img {
 		width: 200px;
 		height: 200px;
@@ -225,20 +230,41 @@ button {
 	}
 
 	.section .container {
-		flex-wrap: wrap;
+		/* flex-wrap: wrap; */
 		width: fit-content;
-	}
-	/* .section .container i {
-		flex: 0 50%;
-	} */
-	.section p {
-		width: 80%;
-		padding-left: 10%;
 		padding-right: 10%;
 	}
+
+	.section p {
+		width: 80%;
+		padding-right: 10%;
+	}
+	.container i {
+		font-size: 150%;
+	}
+	#page1,
 	#page2,
 	#page3,
 	#page4 {
 		padding-top: 50px;
+	}
+
+	#email {
+		margin-top: 2%;
+		margin-left: 2%;
+		margin-right: 100%;
+		font-size: 100%;
+		width: 60%;
+		font-family: inherit;
+	}
+
+	#message {
+		margin-top: 2%;
+		margin-left: 2%;
+		margin-right: 100%;
+		font-size: 100%;
+		width: 60%;
+		height: 200px;
+		font-family: inherit;
 	}
 }
