@@ -156,6 +156,13 @@ body {
 	display: block;
 	height: auto;
 }
+.social {
+	padding: 2% 1% 2% 1%;
+}
+.social img {
+	width: 100px;
+	height: 100px;
+}
 
 #page1 img {
 	border-radius: 50%;
