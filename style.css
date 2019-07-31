@@ -26,6 +26,33 @@ body {
 	transition: margin-left 0.5s;
 	max-height: 50px;
 }
+.sidebar {
+	width: 0;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+	background-color: black;
+}
+.sidebar img {
+	height: 160px;
+	width: 100%;
+}
+.sidebar a {
+	padding: 8px 8px 8px 20px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.5s;
+}
+.sidebar a:hover {
+	color: #f1f1f1;
+}
+
 #content {
 	height: 100%;
 	width: 100%;
@@ -39,6 +66,13 @@ body {
 	height: 100%;
 	padding-bottom: 10%;
 }
+#page1 img {
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	margin-left: 1%;
+	margin-top: 2%;
+}
 
 #page2,
 #page3,
@@ -49,35 +83,6 @@ body {
 	padding-top: 50px;
 }
 /* Pages */
-
-.sidebar {
-	width: 0;
-	height: 100%;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	overflow-x: hidden;
-	transition: 0.5s;
-	background-color: black;
-}
-
-.sidebar img {
-	height: 160px;
-	width: 100%;
-}
-.sidebar a {
-	padding: 8px 8px 8px 20px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
-	display: block;
-	transition: 0.5s;
-}
-
-.sidebar a:hover {
-	color: #f1f1f1;
-}
 
 .section {
 	width: 100%;
@@ -91,7 +96,6 @@ body {
 	margin: 0;
 	width: 50px;
 }
-
 .section h2 {
 	font-size: 4rem;
 	color: white;
@@ -118,6 +122,16 @@ body {
 	height: 0;
 	display: block;
 }
+.section p {
+	font-size: 20px;
+	color: white;
+	width: 20%;
+	height: auto;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin: 2% 1% 2% 1%;
+}
+
 
 .container {
 	margin-top: 2%;
@@ -132,35 +146,6 @@ body {
 	font-size: 300%;
 }
 
-.section p {
-	font-size: 20px;
-	color: white;
-	width: 20%;
-	height: auto;
-	padding-left: 1%;
-	padding-right: 1%;
-	margin: 2% 1% 2% 1%;
-}
-
-.section form {
-	display: block;
-	height: auto;
-}
-.social {
-	padding: 2% 1% 2% 1%;
-}
-.social img {
-	width: 100px;
-	height: 100px;
-}
-
-#page1 img {
-	border-radius: 50%;
-	width: 300px;
-	height: 300px;
-	margin-left: 1%;
-	margin-top: 2%;
-}
 
 #about {
 	/* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)); */
@@ -168,9 +153,13 @@ body {
 	padding: 2% 3% 2% 3%;
 	margin-left: 0;
 }
+
+
 #contactForm {
 	margin-top: 2%;
 	margin-left: 2%;
+	display: block;
+	height: auto;
 }
 #recaptcha {
 	margin-top: 2%;
@@ -183,7 +172,6 @@ body {
 	width: 40%;
 	font-family: inherit;
 }
-
 #message {
 	margin-top: 2%;
 	margin-right: 100%;
@@ -192,7 +180,6 @@ body {
 	height: 200px;
 	font-family: inherit;
 }
-
 button {
 	background: white;
 	color: black;
@@ -203,8 +190,17 @@ button {
 	font: bold 20px calibri, sans-serif;
 	text-shadow: none;
 	margin-top: 2%;
-	cursor: not-allowed;
 }
+
+
+.social {
+	padding: 2% 1% 2% 1%;
+}
+.social img {
+	width: 100px;
+	height: 100px;
+}
+
 
 @media (max-width: 1023px) {
 	body,
@@ -230,20 +226,20 @@ button {
 		border-bottom: 40px solid white;
 		line-height: 40px;
 	}
-
+	.section p {
+		width: 80%;
+		padding-right: 10%;
+	}
 	.section .container {
 		/* flex-wrap: wrap; */
 		width: fit-content;
 		padding-right: 10%;
 	}
-
-	.section p {
-		width: 80%;
-		padding-right: 10%;
-	}
 	.container i {
 		font-size: 150%;
 	}
+
+	
 	#page1,
 	#page2,
 	#page3,
