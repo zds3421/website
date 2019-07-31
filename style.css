@@ -4,16 +4,16 @@ html {
 	background-attachment: fixed;
 	top: 0;
 	right: 0;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	font-family: calibri;
 }
 
 html,
 body {
 	width: 100%;
 	height: 100%;
-	font-family: calibri;
 	margin: 0 0;
-	overflow-x: hidden;
-	scroll-behavior: smooth;
 }
 
 #hamburger {
@@ -32,24 +32,23 @@ body {
 	transition: margin-left .5s;
 	background-color: transparent;
 }
-#page1,
-#page4 {
+
+/* Pages */
+#page1 {
 	width: 100%;
 	height: 100%;
-}
-#page1 {
 	padding-bottom: 10%;
 }
-#page4 {
-	padding-top: 50px;
-	max-height: 100%;
-}
+
 #page2,
-#page3 {
+#page3,
+#page4,
+#page5 {
 	width: 100%;
 	height: auto;
 	padding-top: 50px;
 }
+/* Pages */
 
 .sidebar {
 	width: 0;
@@ -60,7 +59,6 @@ body {
 	left: 0;
 	overflow-x: hidden;
 	transition: 0.5s;
-	padding-top: 0;
 	background-color: black;
 }
 
@@ -82,22 +80,16 @@ body {
 }
 
 .section {
-	/*background: url("background1.png");*/
 	width: 100%;
 	height: 100%;
 	display: inline-block;
 	margin-top: 0%;
-	top: 0;
-	right: 0;
-	left: 0;
-	padding-left: 0;
 }
 .section h1 {
 	color: black;
 	font-size: 6rem;
 	margin: 0;
 	width: 50px;
-	padding-left: 2%;
 }
 
 .section h2 {
@@ -115,8 +107,7 @@ body {
 .section h3 {
 	color: black;
 	font-size: 200%;
-	margin: 0;
-	padding: 0;
+	margin: 0 0;
 	padding-left: 2%;
 	background-color: transparent;
 	width: 50%;
@@ -134,7 +125,6 @@ body {
 	display: flex;
 	width: fit-content;
 	overflow-x: hidden;
-	/* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)); */
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -178,10 +168,16 @@ body {
 	padding: 2% 3% 2% 3%;
 	margin-left: 0;
 }
-
-#email {
+#contactForm {
 	margin-top: 2%;
 	margin-left: 2%;
+}
+#recaptcha {
+	margin-top: 2%;
+}
+#email,
+#name {
+	margin-top: 2%;
 	margin-right: 100%;
 	font-size: 160%;
 	width: 40%;
@@ -190,7 +186,6 @@ body {
 
 #message {
 	margin-top: 2%;
-	margin-left: 2%;
 	margin-right: 100%;
 	font-size: 160%;
 	width: 40%;
@@ -208,7 +203,7 @@ button {
 	font: bold 20px calibri, sans-serif;
 	text-shadow: none;
 	margin-top: 2%;
-	margin-left: 2%;
+	cursor: not-allowed;
 }
 
 @media (max-width: 1023px) {
@@ -256,7 +251,8 @@ button {
 		padding-top: 50px;
 	}
 
-	#email {
+	#email,
+	#name {
 		margin-top: 2%;
 		margin-left: 2%;
 		margin-right: 100%;
@@ -273,5 +269,10 @@ button {
 		width: 60%;
 		height: 200px;
 		font-family: inherit;
+	}
+	#recaptcha,
+	#submit {
+		margin-top: 2%;
+		margin-left: 2%;
 	}
 }

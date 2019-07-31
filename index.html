@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -12,16 +11,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" </script> <![endif]-->
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+
 	<title>Zander Swanepoel Web-Portfolio</title>
 
 
 	<link rel="stylesheet"
 		href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
+
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script type="text/javascript">
+		function dataCallback(response) {
+			console.log(response);
+			window.location.href = "/checkRecaptcha?response=" + encodeURIComponent(response)
+		}
+		function dataExpiredCallback() {
+			console.log("dataExpiredCallback");
+			var btn = document.getElementById('submit');
+		}
+	</script>
+
 </head>
 
 <body>
-	<!-- <script src="script.js"></script> -->
 	<div id="sidenav" class="sidebar">
 		<img src="Z.png">
 		<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a> -->
@@ -29,6 +42,7 @@
 		<a href="#page2" onclick="closeNav()">About&nbspMe</a>
 		<a href="#page3" onclick="closeNav()">Skills</a>
 		<a href="#page4" onclick="closeNav()">Contact&nbspMe</a>
+		<a href="#page5" onclick="closeNav()">Links</a>
 	</div>
 	<div id="content" class="content">
 
@@ -51,8 +65,8 @@
 		</div>
 		<div id="page3" class="section">
 			<h2>SKILLS</h2>
-				<div class="container">
-					<p>
+			<div class="container">
+				<p>
 					<!-- <img src="python.png"> -->
 					<i class="devicon-python-plain colored">Python</i><br>
 					<!-- <img src="java.png"> -->
@@ -65,29 +79,46 @@
 					<i class="devicon-javascript-plain colored">Javascript</i><br>
 					<!-- <img src="delphi.png"> -->
 					<i class="devicon-nodejs-plain colored">NodeJS</i>
-					</p>
+				</p>
 			</div>
 		</div>
 		<div id="page4" class="section">
 			<h2>CONTACT ME</h2>
-			<form>
-				<input id="email" type="text" placeholder="Email">
+			<form id="contactForm" method="POST">
+				<input id="name" type="text" placeholder="Name">
+				<input id="email" type="email" placeholder="Email">
 				<textarea id="message" placeholder="Message"></textarea>
-				<p>recaptcha</p>
-				<button>Submit</button>
+				<div id="recaptcha" class="g-recaptcha" data-sitekey="6LdWt60UAAAAAEQI328rgoZekB-EfTsyy0xHZP3j"
+					data-callback="dataCallback" data-expired-callback="dataExpiredCallback"></div>
+				<button id="submit" type="submit" disabled>Submit</button>
 			</form>
-			<div class="social"><a href="https://www.linkedin.com/in/zander-swanepoel-b3571618b" target="_blank"><img src="LinkedIn.png"></a><a href="https://github.com/ZanderDS" target="_blank"><img src="GitHub.png"></a></div>
+		</div>
+
+		<div id="page5" class="section">
+			<div class="social"><a href="https://www.linkedin.com/in/zander-swanepoel-b3571618b" target="_blank"><img
+						src="LinkedIn.png"></a><a href="https://github.com/ZanderDS" target="_blank"><img
+						src="GitHub.png"></a></div>
 		</div>
 	</div>
-		<script src="script.js"></script>
-		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="/__/firebase/6.3.0/firebase-app.js"></script>
 
-		<!-- TODO: Add SDKs for Firebase products that you want to use
+
+	<!-- The core Firebase JS SDK is always required and must be listed first
+		<script src="/__/firebase/6.3.0/firebase-app.js"></script> -->
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#reserved-urls -->
 
-		<!-- Initialize Firebase -->
-		<script src="/__/firebase/init.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-functions.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+			https://firebase.google.com/docs/web/setup#config-web-app -->
+
+	<script src="main.js"></script>
+	<script src="script.js"></script>
 </body>
 
 
