@@ -22,13 +22,15 @@
 
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script type="text/javascript">
+		var btn = document.getElementById('submit');
 		function dataCallback(response) {
 			console.log(response);
-			window.location.href = "/checkRecaptcha?response=" + encodeURIComponent(response)
+			window.location.href = "/checkRecaptcha?response=" + encodeURIComponent(response);
+			btn.removeAttribute('disabled');
 		}
 		function dataExpiredCallback() {
 			console.log("dataExpiredCallback");
-			var btn = document.getElementById('submit');
+			btn.setAttribute('disabled');
 		}
 	</script>
 
@@ -87,7 +89,7 @@
 				<textarea id="message" placeholder="Message"></textarea>
 				<div id="recaptcha" class="g-recaptcha" data-sitekey="6LdWt60UAAAAAEQI328rgoZekB-EfTsyy0xHZP3j"
 					data-callback="dataCallback" data-expired-callback="dataExpiredCallback"></div>
-				<button id="submit" type="submit">Submit</button>
+				<button id="submit" type="submit" disabled>Submit</button>
 			</form>
 		</div>
 
