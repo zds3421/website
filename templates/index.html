@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
-{% block title %}Home Page{% endblock %}
+{% block title %}
+    Zander Swanepoel
+{% endblock %}
+{% block heading %}
+    <h1>ザンダースワンポール</h1>
+    <h2>ソフトウェア開発者</h2>
+    <h3>[ zander swanepoel ]</h3>
+    <h4>[ software engineer ]</h4>
+{% endblock %}
+{% block about %}
+    <p>My name is Zander Swanepoel and I am a Software Developer. I am a self-motivated
+    person and enjoy solving problems. I enjoy learning as I work and love to find out new
+    things about technology. In my free time, I enjoy playing computer games and chess. I
+    also really like talking about cars.</p>
+{% endblock %}
 {% block content %}
+<image src="{{url_for('static', filename='images/ok-sign.gif')}}"></image>
 <h1>Test</h1>
 {% endblock %}
