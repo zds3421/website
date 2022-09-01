@@ -9,7 +9,7 @@ def home():
 
 @app.route('/ruan')
 def home():
-    return
+    return '<h1>bitch</h1>'
 
 
 if __name__ == '__main__':
